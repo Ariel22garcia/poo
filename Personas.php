@@ -12,7 +12,16 @@ class Persona {
 	 public $apellido;
      public function hablar(){
      echo "soy ". $this->nombre . " y estoy hablando";
-	 }
+	 } 
+	 public function acariciar($perro){
+	 $perro->moverCola();
+	 }	 
+}
+class Perro {
+    public $nombre;
+	public function moverCola (){
+	echo "mover la cola";
+	}
 }
 $p = new Persona(); 
 $p->nombre = "Micaela";
@@ -27,6 +36,10 @@ echo "hola " .$p1->nombre;
 echo "<br>";
 $p->hablar();
 $p1->hablar();
+
+$perro = new Perro();
+$perro->moverCola(); 
+$p->acariciar($perro);
 ?>
 </body>
 </html>
